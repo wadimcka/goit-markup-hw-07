@@ -24,7 +24,6 @@
       <nav class="nav-mane">
         <a class="logo-link link" href="./index.html">Web<span class="accent">Studio</span></a>
         <ul class="menu list">
-
           <li class="menu-item">
             <a class="menu-link current-link link" href="./index.html">Studio</a>
           </li>
@@ -38,6 +37,14 @@
           </li>
         </ul>
       </nav>
+
+      <button type="button" class="button mobile-menu-btn menu-toggle js-open-menu" aria-label="mobile menu switch"
+        aria-controls="mobile-menu" aria-expanded="false">
+        <svg class="mobile-menu-icon" width="32" height="22">
+          <use href="./images/svg/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
+
       <address class="connection">
         <ul class="connection-list list">
           <li class="connection-item"><a class="header-contact link"
@@ -46,6 +53,66 @@
           </li>
         </ul>
       </address>
+
+      <div class="mobile-menu menu-container js-menu-container visually-hidden" id="mobile-menu">
+        <div>
+          <button type="button" class="button mobile-close-btn menu-toggle js-close-menu">
+            <svg class="mobile-btn-icon" width="8" height="8">
+              <use href="./images/svg/icons.svg#icon_mobile_close"></use>
+            </svg>
+          </button>
+
+          <nav class="mobile-nav">
+            <ul class="mobile-list list">
+              <li class="mobile-list-item">
+                <a class="mobile-list-link link" href="./index.html">Studio</a>
+              </li>
+              <li class="mobile-list-item">
+                <a class="mobile-list-link link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="mobile-list-item">
+                <a class="mobile-list-link link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div>
+          <address class="mobile-connection">
+            <ul class="mobile-connection-list list">
+              <li class="mobile-connection-item"><a class="mobile-header-tel link" href="mail:+110001111111">+11 (000)
+                  111-11-11</a>
+              </li>
+              <li class="mobile-connection-item"><a class="mobile-header-email link"
+                  href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+          </address>
+
+          <ul class="mobile-social-list list">
+            <li class="mobile-social-item"><a class="mobile-social-link link" href="">
+                <svg class="mobile-socisl-icon" width="24" height="24">
+                  <use href="./images/svg/icons.svg#icon_instagram"></use>
+                </svg>
+              </a></li>
+            <li class="mobile-social-item"><a class="mobile-social-link link" href="">
+                <svg class="mobile-socisl-icon" width="24" height="24">
+                  <use href="./images/svg/icons.svg#icon_twitter"></use>
+                </svg>
+              </a></li>
+            <li class="mobile-social-item"><a class="mobile-social-link link" href="">
+                <svg class="mobile-socisl-icon" width="24" height="24">
+                  <use href="./images/svg/icons.svg#icon_facebook"></use>
+                </svg>
+              </a></li>
+            <li class="mobile-social-item"><a class="mobile-social-link link" href="">
+                <svg class="mobile-socisl-icon" width="24" height="24">
+                  <use href="./images/svg/icons.svg#icon_linkedin"></use>
+                </svg>
+              </a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -53,15 +120,15 @@
   <main>
 
     <!-- Hero -->
-    <section class="hero">
+    <!-- <section class="hero">
       <div class="conteiner hero-conteiner">
         <h1 class="hero-title title">Effective Solutions for Your Business</h1>
         <button class="button hero-btn" type="button" data-modal-open>Order Service</button>
       </div>
-    </section>
+    </section> -->
 
     <!-- Our Advantages-->
-    <section class="advantages">
+    <!-- <section class="advantages">
       <div class="conteiner advantages-conteiner">
         <h2 class="advantages-title visually-hidden">Our Advantages</h2>
         <ul class="advantages-list list">
@@ -118,10 +185,10 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <!-- Products -->
-    <section class="products">
+    <!-- <section class="products">
       <div class="conteiner products-conteiner">
         <h2 class="products-title">What are we doing</h2>
         <div class="photo-conteiner">
@@ -139,10 +206,10 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Our Team -->
-    <section class="team">
+    <!-- <section class="team">
       <div class="conteiner team-conteiner">
         <h2 class="team-title">Our Team</h2>
         <ul class="team-list list">
@@ -284,10 +351,10 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
 
     <!-- Customers -->
-    <section class="customers">
+    <!-- <section class="customers">
       <div class="conteiner">
         <h2 class="customers-title">Customers</h2>
         <ul class="customers-list list">
@@ -342,10 +409,10 @@
         </ul>
       </div>
     </section>
-  </main>
+  </main> -->
 
-  <!-- Footer -->
-  <footer class="footer">
+    <!-- Footer -->
+    <!-- <footer class="footer">
     <div class="conteiner footer-conteiner">
       <div class="footer-logo">
         <a class="footer-logo-link link" href="./index.html">Web<span class="accent-footer">Studio</span></a>
@@ -391,9 +458,9 @@
             </a>
           </li>
         </ul>
-      </div>
-      <!-- Footer Form -->
-      <form>
+      </div> -->
+    <!-- Footer Form -->
+    <!-- <form>
         <p class="futer-form-paragraph">Subscribe</p>
         <div class="futer-form-wrap">
           <div class="footer-input-wrap">
@@ -410,18 +477,18 @@
         </div>
       </form>
     </div>
-  </footer>
+  </footer> -->
 
-  <!-- Modal Window -->
-  <div class="backdrop is-hidden" data-modal>
+    <!-- Modal Window -->
+    <!-- <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button type="button" class="button modal-button-close" data-modal-close>
         <svg class="modal-button-icon" width="8" height="8">
           <use href="./images/svg/icons.svg#icon_modal_close"></use>
         </svg>
-      </button>
-      <!-- Modal Form -->
-      <p class="modal-title">Leave your contacts and we will call you back</p>
+      </button> -->
+    <!-- Modal Form -->
+    <!-- <p class="modal-title">Leave your contacts and we will call you back</p>
       <form class="form-modal">
         <ul class="form-list list">
           <li class="form-list-item">
@@ -474,10 +541,15 @@
 
       </form>
     </div>
-  </div>
+  </div> -->
 
-  <!-- Script -->
-  <script src="./js/modal.js"></script>
+    <!-- Script -->
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script defer src="js/mobile.js"></script>
+    <script src="./js/modal.js"></script>
 
 </body>
 
