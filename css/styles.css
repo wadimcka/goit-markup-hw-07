@@ -97,9 +97,7 @@ body {
   width: 100%;
   padding-left: 16px;
   padding-right: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin: 0 auto;
 }
 
 /**================= HEADER =======================*/
@@ -109,6 +107,11 @@ body {
   border-bottom: 1px solid var(--accent-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo-link {
@@ -290,7 +293,7 @@ body {
   }
 }
 
-/* ? ================ TABLET ==================== */
+/* ! ================ TABLET ==================== */
 @media screen and (min-width: 767px) {
   .mobile-menu-btn {
     display: none;
@@ -324,14 +327,12 @@ body {
 
 .menu-link {
   display: block;
-
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--overlays-color);
-
   position: relative;
   transition: color var(--transition-dur-time);
 }
@@ -375,6 +376,7 @@ body {
   .conteiner {
     width: 1158px;
   }
+
   .connection {
     display: flex;
     margin-left: auto;
@@ -405,32 +407,26 @@ body {
 
 /**================= HERO =======================*/
 /* todo ============ MOBILE ======================*/
-
-/* .hero {
-  max-width: 1440px;
-  margin: 0 auto;
-  background-color: var(--overlays-color);
+.hero-conteiner {
+  padding: 112px 54px;
+}
+.hero-title {
   text-align: center;
-  padding: 188px 0px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 72px;
+}
 
+.hero {
+  background-color: var(--overlays-color);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/main_page/hero/hero_bg_photo.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.hero-conteiner {
-  flex-wrap: wrap;
-}
-.hero-title {
-  display: inline-block;
-  margin-bottom: 48px;
-  color: #ffffff;
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  max-width: 496px;
 }
 
 .hero-btn {
@@ -452,7 +448,39 @@ body {
   color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-} */
+}
+/* ! ================ TABLET ==================== */
+@media screen and (min-width: 767px) {
+  .hero-conteiner {
+    padding: 112px 136px;
+  }
+  .hero-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+  }
+}
+
+/* ? ================ DESKTOP ==================== */
+@media screen and (min-width: 1200px) {
+  .hero-conteiner {
+    padding: 188px;
+  }
+
+  .hero-title {
+    margin-bottom: 48px;
+    text-align: center;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 1.07;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 496px;
+  }
+}
 
 /* * =============== ADVANTAGES =====================*/
 /* .advantages {
@@ -786,16 +814,18 @@ body {
 } */
 
 /**================= MODAL WINDOW ====================*/
-/* .backdrop {
+/* todo ============ MOBILE ======================*/
+.backdrop {
   position: fixed;
   left: 0px;
   top: 0px;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
+  z-index: 500;
+  width: 100vw;
+  height: 100vh;
+  /* padding: 96px 18px 114px 18px; */
 
-  background: rgba(46, 47, 66, 0.4);
-
+  background-color: rgba(46, 47, 66, 0.4);
+  overflow-y: scroll;
   opacity: 1;
   transition: opacity var(--transition-dur-time), visibility var(--transition-dur-time);
 }
@@ -810,8 +840,12 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 408px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
+  max-width: 392px;
+  max-height: 584px;
+
+  width: 100%;
+  height: 100%;
 
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -859,12 +893,35 @@ body {
 .modal-button-close:hover > .modal-button-icon,
 .modal-button-close:focus > .modal-button-icon {
   fill: #ffffff;
-} */
+}
+
+@media screen and (max-width: 767px) {
+  .modal {
+    overflow: scroll;
+  }
+}
+
+/* ! ================ TABLET ==================== */
+@media screen and (min-width: 767px) {
+  .modal {
+    max-width: 408px;
+    max-height: 584px;
+    width: 100%;
+    height: 100%;
+    padding: 72px 25px 24px 23px;
+  }
+}
+/* ? ================ DESKTOP ==================== */
+@media screen and (min-width: 1200px) {
+  .modal {
+    padding: 72px 24px 24px 24px;
+  }
+}
 
 /**================= MODAL FORM ==================*/
-/* .modal-title {
+/* todo ============ MOBILE ======================*/
+.modal-title {
   margin-bottom: 16px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -925,7 +982,7 @@ body {
   padding: 8px 16px;
   resize: none;
   width: 100%;
-  height: 120px;
+  min-height: 120px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -945,12 +1002,6 @@ body {
   align-items: center;
   padding-left: 24px;
   margin-bottom: 24px;
-
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17px;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
 }
 
 .form-check {
@@ -973,6 +1024,12 @@ body {
   transition: background-color var(--transition-dur-time), border-color var(--transition-dur-time);
 }
 
+.label.form-check-label {
+  width: 100%;
+  max-width: 300px; /* Пример ширины */
+  word-break: break-all;
+}
+
 .form-check:checked + .form-check-cell {
   background-color: var(--active-states);
   border-color: var(--active-states);
@@ -991,6 +1048,15 @@ body {
   background-position: center;
   opacity: 0;
   transition: opacity var(--transition-dur-time);
+}
+
+.form-chek-text {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  /* line-height: 1.17px; */
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 
 .check-link {
@@ -1021,7 +1087,7 @@ body {
   color: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-} */
+}
 
 /*?================= PAGE PORTFOLIO ==================*/
 
