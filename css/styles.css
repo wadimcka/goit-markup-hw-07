@@ -483,6 +483,88 @@ body {
 }
 
 /* * =============== ADVANTAGES =====================*/
+/* todo ============ MOBILE ======================*/
+@media screen and (max-width: 1200px) {
+  .box-icon {
+    display: none;
+  }
+
+  .advantages {
+    padding: 96px 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .advantages-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
+
+  .advantages-subtitle {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+}
+
+/* ! ================ TABLET ==================== */
+@media screen and (max-width: 1199px) and (min-width: 767px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -24px;
+    margin-bottom: -72px;
+  }
+
+  .advantages-item {
+    flex-basis: calc((100% - 2 * 24px) / 2);
+    margin-left: var(--card-margin-horizontal);
+    margin-bottom: 72px;
+  }
+}
+
+/* @media screen and (max-width: 1199px) {
+  .advantages-list {
+    flex-wrap: wrap;
+  }
+} */
+/* ? ================ DESKTOP ==================== */
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding-top: var(--section-padding-top-);
+    padding-bottom: var(--section-padding-bootom-);
+  }
+  .advantages-list {
+    display: flex;
+    margin-left: -24px;
+  }
+  .advantages-item {
+    flex-basis: calc((100% - 4 * 24px) / 4);
+    margin-left: 24px;
+    margin-bottom: 0px;
+  }
+
+  .box-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 100px;
+    background-color: var(--button-bg-color);
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+
+  .advantages-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .advantages-subtitle {
+    margin-bottom: 8px;
+  }
+}
 /* .advantages {
   padding-top: var(--section-padding-top-);
 }
@@ -822,7 +904,6 @@ body {
   z-index: 500;
   width: 100vw;
   height: 100vh;
-  /* padding: 96px 18px 114px 18px; */
 
   background-color: rgba(46, 47, 66, 0.4);
   overflow-y: scroll;
