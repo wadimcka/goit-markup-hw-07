@@ -329,6 +329,9 @@ body {
 }
 
 /**================= OUR TEAM =======================*/
+.team-conteiner {
+  width: 100%;
+}
 .team {
   background-color: var(--overlays-scdr-color);
   text-align: center;
