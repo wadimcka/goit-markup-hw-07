@@ -283,15 +283,6 @@ body {
   background-color: var(--active-states);
 }
 
-/* @media screen and (max-width: 767px) {
-  .menu {
-    display: none;
-  }
-  .connection {
-    display: none;
-  }
-} */
-
 @media screen and (min-width: 480px) {
   .conteiner {
     width: 428px;
@@ -703,7 +694,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   flex-basis: 100%;
-  /* max-width: 264px; */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
@@ -806,61 +796,6 @@ body {
   }
 }
 
-/* .team-title {
-  margin-bottom: 72px;
-
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--headings-text-color);
-}
-
-.team-list-item {
-  margin-left: 24px;
-  margin-top: 64px;
-  flex-basis: calc((100% - 4 * 24px) / 4);
-  background: #ffffff;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team-card {
-  padding: 32px 16px;
-}
-
-.team-name {
-  margin-bottom: 8px;
-}
-.team-text {
-  margin-bottom: 8px;
-}
-.social-list {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--card-margin-horizontal);
-}
-
-.social-item {
-  width: 40px;
-  height: 40px;
-}
-.social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #4d5ae5;
-  transition: background-color var(--transition-dur-time);
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--active-states);
-} */
 /**================= CUSTOMERS ======================*/
 /* todo ============ MOBILE =========================*/
 .customers {
@@ -895,8 +830,6 @@ body {
 .customers-link {
   justify-content: center;
   align-items: center;
-  /* width: 100%;
-  height: 100%; */
   color: #8e8f99;
   border: 1px solid #8e8f99;
   border-radius: 4px;
@@ -926,13 +859,6 @@ body {
   }
 }
 
-/* @media screen and (max-width: 767px) {
-  .customers-item {
-    max-width: 190px;
-    flex-basis: calc((100% - 2 * 16px) / 2);
-  }
-} */
-
 /* ! ================ TABLET ==================== */
 @media screen and (min-width: 768px) {
   .customers-conteiner {
@@ -940,8 +866,7 @@ body {
   }
   .customers-list {
     gap: 24px;
-    /* justify-content: space-between; */
-  }
+      }
 
   .customers-item {
     width: 168px;
@@ -1043,12 +968,6 @@ body {
   }
 }
 
-/* @media screen (max-width: 481px) {
-  .footer-conteiner {
-    width: 100%;
-  }
-} */
-
 /* ! ================ TABLET ==================== */
 @media screen and (min-width: 768px) {
   .footer-conteiner {
@@ -1065,7 +984,6 @@ body {
   }
 
   .footer-text {
-    /* margin-top: 0px; */
     margin-bottom: 0px;
   }
 
@@ -1093,71 +1011,7 @@ body {
   .footer-social {
     margin-right: 80px;
   }
-  /* width: 100%;
-  flex-basis: calc((100% - 3 * 16px) / 4); */
-}
-/* .footer {
-  display: flex;
-  background-color: var(--overlays-color);
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-.footer-conteiner {
-  display: flex;
-}
-.footer-logo {
-  margin-right: 120px;
-}
-
-.accent-footer {
-  color: var(--overlays-scdr-color);
-}
-
-.footer-logo-link {
-  color: var(--active-states);
-  font-family: var(--secondary-font);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.footer-text {
-  margin-top: 16px;
-  width: 264px;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--overlays-scdr-color);
-}
-.footer-social {
-  margin-right: 80px;
-}
-.footer-name {
-  margin-bottom: 16px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-}
-
-.footer-social-list {
-  display: flex;
-  gap: 16px;
-}
-
-.footer-social-link {
-  transition: background-color var(--transition-dur-time);
-}
-
-.footer-social-link:hover,
-.footer-social-link:focus {
-  background-color: #31d0aa;
-} */
-
+  
 /**================= FOOTER FORM==================*/
 /* todo ============ MOBILE =======================*/
 
@@ -1246,6 +1100,7 @@ body {
   align-items: center;
   gap: 16px;
 }
+
 /* ! ================ TABLET ==================== */
 @media screen and (min-width: 768px) {
   .futer-form-paragraph {
@@ -1265,84 +1120,6 @@ body {
     top: 35%;
   }
 }
-
-/* .futer-form-wrap {
-  display: flex;
-  position: relative;
-}
-
-.footer-input-wrap {
-  display: flex;
-}
-
-.footer-input {
-  display: block;
-  width: 264px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  background-color: #2e2f42;
-  color: #ffffff;
-
-  padding: 8px 0px 8px 16px;
-  margin-right: 24px;
-  outline: none;
-
-  border: 1px solid #ffffff;
-  border-radius: 4px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-}
-
-.footer-input:hover + .footer-label,
-.footer-input:not(:placeholder-shown) + .footer-label {
-  transform: translate(50%, -33px);
-}
-
-
-.footer-label {
-  position: absolute;
-  top: 50%;
-  transform: translateX(50%);
-
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2px;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  transition: transform var(--transition-dur-time);
-}
-
-.footer-btn {
-  margin: 0 auto;
-  padding: 8px 24px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5px;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-
-  background-color: #4d5ae5;
-  border-radius: 4px;
-  border-color: #4d5ae5;
-
-  transition: background-color var(--transition-dur-time);
-}
-
-.footer-btn:hover,
-.footer-btn:focus {
-  background-color: var(--active-states);
-  color: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-.footer-btn-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-} */
 
 /**================= MODAL WINDOW ====================*/
 /* todo ============ MOBILE ======================*/
@@ -1441,6 +1218,7 @@ body {
     padding: 72px 25px 24px 23px;
   }
 }
+
 /* ? ================ DESKTOP ==================== */
 @media screen and (min-width: 1200px) {
   .modal {
