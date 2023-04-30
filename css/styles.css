@@ -982,7 +982,8 @@ body {
 
 .footer-logo {
   text-align: center;
-  width: 268px;
+  width: 264px;
+  margin: auto;
 }
 
 .accent-footer {
@@ -1060,6 +1061,7 @@ body {
   .footer-logo {
     width: 264px;
     text-align: left;
+    margin: 0;
   }
 
   .footer-text {
