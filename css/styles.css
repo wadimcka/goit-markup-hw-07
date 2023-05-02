@@ -87,6 +87,7 @@ body {
 
 /** DESCRIPTION ==================== */
 .description {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -215,7 +216,7 @@ body {
   fill: #ffffff;
 }
 
-.mobile-list-item0 {
+.mobile-list-item {
   margin-bottom: 40px;
 }
 
@@ -423,12 +424,14 @@ body {
 /* todo ============ MOBILE =====================*/
 .hero {
   padding: 112px 0px;
+  margin: 0 auto;
   background-color: var(--overlays-color);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/main_page/hero/hero_bg_mob.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 480px;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -476,6 +479,8 @@ body {
     background-color: var(--overlays-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/main_page/hero/hero_bg_tab.jpg);
+    background-size: cover;
+    max-width: 768px;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -504,7 +509,8 @@ body {
     background-color: var(--overlays-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/main_page/hero/hero_bg.jpg);
-    background-size: contain;
+    background-size: cover;
+    max-width: 1440px;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -524,9 +530,9 @@ body {
     padding: 188px 0px;
   }
 
-  .hero-conteiner {
+  /* .hero-conteiner {
     max-width: 1440px;
-  }
+  } */
 
   .hero-title {
     margin-bottom: 48px;
@@ -575,14 +581,16 @@ body {
   .advantages-list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -24px;
-    margin-bottom: -72px;
+    gap: 72px 24px;
   }
 
   .advantages-item {
-    flex-basis: calc((100% - 2 * 24px) / 2);
-    margin-left: var(--card-margin-horizontal);
-    margin-bottom: 72px;
+    width: 356px;
+    margin-bottom: 0px;
+  }
+
+  .advantages-item:not(:last-child) {
+    margin-bottom: 0px;
   }
 
   .advantages-subtitle {
@@ -594,21 +602,25 @@ body {
 @media screen and (min-width: 1200px) {
   .advantages {
     padding-top: var(--section-padding-top-);
+    padding-bottom: 0px;
   }
 
   .advantages-conteiner {
     width: 1160px;
   }
 
+  .advantages-description {
+    font-weight: 400;
+  }
+
   .advantages-list {
     display: flex;
     flex-wrap: nowrap;
-    margin-left: -24px;
+    gap: 24px;
   }
 
   .advantages-item {
-    flex-basis: calc((100% - 4 * 24px) / 4);
-    margin-left: 24px;
+    width: 264px;
     margin-bottom: 0px;
   }
 
@@ -696,7 +708,7 @@ body {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
 }
 
 .team-list-item {
@@ -785,14 +797,15 @@ body {
   }
   .team-list {
     margin-top: 72px;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 0px;
+    gap: 24px;
   }
 
   .team-list-item {
     margin-top: 0px;
-    flex-basis: calc((100% - 3 * 24px) / 4);
     background: #ffffff;
+    width: 264px;
   }
 }
 
@@ -860,7 +873,7 @@ body {
     width: 584px;
   }
   .customers-list {
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .customers-item {
