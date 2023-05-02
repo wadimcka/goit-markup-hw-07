@@ -504,7 +504,7 @@ body {
     background-color: var(--overlays-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/main_page/hero/hero_bg.jpg);
-    max-width: 1440px;
+    background-size: contain;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -522,6 +522,10 @@ body {
 @media screen and (min-width: 1200px) {
   .hero {
     padding: 188px 0px;
+  }
+
+  .hero-conteiner {
+    max-width: 1440px;
   }
 
   .hero-title {
@@ -640,7 +644,7 @@ body {
 
 /* ? ================ DESKTOP ====================== */
 .products {
-  padding-top: 0;
+  padding-top: var(--section-padding-top-);
   padding-bottom: var(--section-padding-bootom-);
 }
 
