@@ -160,10 +160,6 @@ body {
 }
 
 .mobile-menu {
-  display: flex;
-  flex-direction: column;
-  transform: translateX(100%);
-  justify-content: space-between;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -171,6 +167,12 @@ body {
   top: 0;
   padding: 80px 35px 40px 40px;
   z-index: 500;
+
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  justify-content: space-between;
+
   background-color: #fcfcfc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -213,7 +215,7 @@ body {
   fill: #ffffff;
 }
 
-.mobile-list-item:not(:last-child) {
+.mobile-list-item0 {
   margin-bottom: 40px;
 }
 
@@ -429,6 +431,16 @@ body {
   background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/main_page/hero/hero_bg_mob_2x.jpg);
+  }
+}
+
 .hero-title {
   margin-bottom: 72px;
   text-align: center;
@@ -437,16 +449,6 @@ body {
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #ffffff;
-}
-
-@media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/main_page/hero/hero_bg_2x.jpg);
-  }
 }
 
 .hero-btn {
@@ -482,7 +484,7 @@ body {
     (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/main_page/hero/hero_bg_2x.jpg);
+        url(../images/main_page/hero/hero_bg_tab_2x.jpg);
     }
   }
 }
@@ -749,14 +751,6 @@ body {
   }
 }
 
-/* @media screen and (max-width: 767px) {
-  .team-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 72px;
-  }
-} */
-
 /* ! ================ TABLET ==================== */
 @media screen and (min-width: 768px), and (max-width: 1199px) {
   .team-conteiner {
@@ -803,10 +797,6 @@ body {
   padding: 96px 0px;
   text-align: center;
 }
-
-/* .customers-conteiner {
-  width: 100%;
-} */
 
 .customers-title {
   font-size: 36px;
@@ -1019,7 +1009,7 @@ body {
   }
 }
 
-/**================= FOOTER FORM==================*/
+/**================= FOOTER FORM ==================*/
 /* todo ============ MOBILE =======================*/
 
 .futer-form-paragraph {
@@ -1341,7 +1331,7 @@ body {
 
 .label.form-check-label {
   width: 100%;
-  max-width: 300px; /* Пример ширины */
+  max-width: 300px;
   word-break: break-all;
 }
 
@@ -1369,7 +1359,6 @@ body {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  /* line-height: 1.17px; */
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
