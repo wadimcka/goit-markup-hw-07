@@ -95,7 +95,7 @@ body {
 
 /** CONTEINER ==================== */
 .conteiner {
-  width: 100%;
+  min-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
@@ -162,6 +162,7 @@ body {
 .mobile-menu {
   display: flex;
   flex-direction: column;
+  transform: translateX(100%);
   justify-content: space-between;
   position: fixed;
   width: 100%;
@@ -170,9 +171,13 @@ body {
   top: 0;
   padding: 80px 35px 40px 40px;
   z-index: 500;
-  background-color: teal;
+  background-color: #fcfcfc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0%);
 }
 
 .mobile-close-btn {
@@ -217,7 +222,6 @@ body {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  text-transform: capitalize;
   color: var(--headings-text-color);
   transition: color var(--transition-dur-time);
 }
@@ -299,13 +303,16 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .conteiner {
-    width: 1156px;
+    width: 1158px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 /* ! ================ TABLET ==================== */
 @media screen and (min-width: 768px) {
+  .logo-link {
+    margin-right: 120px;
+  }
   .mobile-menu-btn {
     display: none;
   }
@@ -319,10 +326,6 @@ body {
   .connection {
     display: block;
   }
-}
-
-.logo-link {
-  margin-right: 120px;
 }
 
 .nav-mane {
@@ -408,30 +411,32 @@ body {
   .header-contact:focus {
     color: var(--active-states);
   }
+
+  .logo-link {
+    margin-right: 76px;
+  }
 }
 
 /**================= HERO =======================*/
 /* todo ============ MOBILE =====================*/
-.hero-conteiner {
-  padding: 112px 54px;
-}
-.hero-title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  margin-bottom: 72px;
-}
-
 .hero {
+  padding: 112px 0px;
   background-color: var(--overlays-color);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/main_page/hero/hero_bg_mob.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero-title {
+  margin-bottom: 72px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -484,16 +489,13 @@ body {
 
 /* ! ================ TABLET ==================== */
 @media screen and (min-width: 768px) {
-  .hero-conteiner {
-    padding: 112px 136px;
-  }
-
   .hero-title {
-    text-align: center;
-    font-weight: 700;
+    margin-bottom: 36px;
     font-size: 56px;
     line-height: 1.07;
-    margin-bottom: 36px;
+    max-width: 496px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero {
@@ -515,20 +517,12 @@ body {
 
 /* ? ================ DESKTOP ==================== */
 @media screen and (min-width: 1200px) {
-  .hero-conteiner {
-    padding: 188px;
+  .hero {
+    padding: 188px 0px;
   }
 
   .hero-title {
     margin-bottom: 48px;
-    text-align: center;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 56px;
-    line-height: 1.07;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 496px;
   }
 }
 
@@ -543,12 +537,12 @@ body {
 }
 
 .advantages-subtitle {
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
-  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -557,7 +551,7 @@ body {
   }
 
   .advantages {
-    padding: 96px 16px;
+    padding: 96px 0px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -583,6 +577,10 @@ body {
     margin-left: var(--card-margin-horizontal);
     margin-bottom: 72px;
   }
+
+  .advantages-subtitle {
+    text-align: left;
+  }
 }
 
 /* ? ================ DESKTOP ==================== */
@@ -590,14 +588,17 @@ body {
   .advantages {
     padding-top: var(--section-padding-top-);
   }
+
   .advantages-conteiner {
     width: 1160px;
   }
+
   .advantages-list {
     display: flex;
     flex-wrap: nowrap;
     margin-left: -24px;
   }
+
   .advantages-item {
     flex-basis: calc((100% - 4 * 24px) / 4);
     margin-left: 24px;
@@ -620,9 +621,12 @@ body {
   }
 
   .advantages-subtitle {
-    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
   }
 }
+
 /**================= PRODUCTS =======================*/
 /* todo ============ MOBILE =========================*/
 @media screen and (max-width: 1199px) {
@@ -633,7 +637,7 @@ body {
 
 /* ? ================ DESKTOP ====================== */
 .products {
-  padding-top: var(--section-padding-top-);
+  padding-top: 0;
   padding-bottom: var(--section-padding-bootom-);
 }
 
@@ -669,8 +673,7 @@ body {
 .team {
   background-color: var(--overlays-scdr-color);
   text-align: center;
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding: 96px 0px;
 }
 
 .team-title {
@@ -686,14 +689,13 @@ body {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 72px;
+  gap: 24px;
 }
 
 .team-list-item {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  flex-basis: 100%;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
@@ -706,6 +708,7 @@ body {
 .team-card {
   display: block;
   padding: 32px 16px;
+  background-color: #ffffff;
 }
 
 .team-text {
@@ -746,13 +749,13 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .team-list {
     display: flex;
     flex-wrap: wrap;
     gap: 72px;
   }
-}
+} */
 
 /* ! ================ TABLET ==================== */
 @media screen and (min-width: 768px), and (max-width: 1199px) {
@@ -761,13 +764,11 @@ body {
   }
 
   .team-list {
-    margin-top: -64px;
     justify-content: center;
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .team-list-item {
-    margin-top: 64px;
     flex-basis: calc((100% - 2 * 24px) / 2);
     background: #ffffff;
   }
@@ -799,14 +800,13 @@ body {
 /**================= CUSTOMERS ======================*/
 /* todo ============ MOBILE =========================*/
 .customers {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding: 96px 0px;
   text-align: center;
 }
 
-.customers-conteiner {
+/* .customers-conteiner {
   width: 100%;
-}
+} */
 
 .customers-title {
   font-size: 36px;
@@ -824,17 +824,17 @@ body {
 
 .customers-item {
   display: flex;
-  flex-basis: calc((100% - 1 * 16px) / 2);
+  width: 190px;
+  height: 88px;
 }
 
 .customers-link {
-  justify-content: center;
-  align-items: center;
   color: #8e8f99;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   padding: 16px 40px;
-
+  width: 100%;
+  height: 100%;
   transition: border-color var(--transition-dur-time), color 1000ms;
 }
 
@@ -866,7 +866,7 @@ body {
   }
   .customers-list {
     gap: 24px;
-      }
+  }
 
   .customers-item {
     width: 168px;
@@ -893,6 +893,9 @@ body {
   .customers-item {
     flex-basis: calc((100% - 5 * 24px) / 6);
   }
+  .customers-item {
+    width: 166px;
+  }
 }
 
 /**================= FOOTER =======================*/
@@ -900,8 +903,7 @@ body {
 
 .footer {
   background-color: var(--overlays-color);
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding: 96px 0px;
   margin: 0 auto;
 }
 
@@ -974,7 +976,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 584px;
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .footer-logo {
@@ -994,6 +996,10 @@ body {
   .footer-name {
     text-align: left;
   }
+
+  .footer-social-list {
+    margin-bottom: 0px;
+  }
 }
 
 /* ? ================ DESKTOP ====================== */
@@ -1011,7 +1017,8 @@ body {
   .footer-social {
     margin-right: 80px;
   }
-  
+}
+
 /**================= FOOTER FORM==================*/
 /* todo ============ MOBILE =======================*/
 
